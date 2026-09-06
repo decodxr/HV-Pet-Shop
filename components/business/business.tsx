@@ -1,0 +1,3 @@
+import { Clock } from "lucide-react";import { getBusinessStatus } from "@/lib/business-hours";import { hours } from "@/lib/data";
+export function BusinessStatus(){const s=getBusinessStatus();return <div className="flex items-center gap-3"><span className={`size-2.5 rounded-full ${s.open?"bg-emerald-500":"bg-clay"}`}/><div><b className="block text-xs uppercase tracking-widest">{s.label}</b><span className="text-sm text-muted">{s.detail}</span></div></div>}
+export function BusinessHours(){return <div className="space-y-3">{hours.map(h=><div className="flex justify-between gap-8 text-sm" key={h.day}><span>{h.label}</span><b>{h.open?`${h.open}–${h.close}`:"Fechado"}</b></div>)}</div>}

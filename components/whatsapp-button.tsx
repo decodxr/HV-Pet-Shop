@@ -1,0 +1,2 @@
+import { MessageCircle } from "lucide-react";import { whatsappUrl } from "@/lib/whatsapp";
+export function WhatsAppButton(){return <a href={whatsappUrl()} aria-label="Fale com a HV pelo WhatsApp" className="fixed bottom-4 left-4 right-4 z-40 flex min-h-14 items-center justify-center gap-2 rounded-full bg-forest px-6 font-bold text-white shadow-soft sm:bottom-6 sm:left-auto sm:right-6"><MessageCircle/> <span>Fale com a HV</span></a>}
