@@ -1,0 +1,1 @@
+import {AdminResource} from "@/components/admin-resource";export default function Page(){return <AdminResource title="Configurações" description="Atualize dados da empresa, horários, links e conteúdo da home."/>}

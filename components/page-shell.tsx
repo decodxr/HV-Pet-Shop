@@ -1,0 +1,1 @@
+import { Container,SectionHeader } from "./ui";export function PageShell({eyebrow,title,copy,children}:{eyebrow:string;title:string;copy?:string;children:React.ReactNode}){return <><section className="bg-sand pb-16 pt-36"><Container><SectionHeader eyebrow={eyebrow} title={title} copy={copy}/></Container></section>{children}</>}

@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";export default function sitemap():MetadataRoute.Sitemap{const base=process.env.NEXT_PUBLIC_SITE_URL||"https://hvpetshop.com.br";return ["","/servicos","/produtos","/sobre","/contato","/privacidade"].map((p,i)=>({url:`${base}${p}`,lastModified:new Date(),changeFrequency:i?"monthly":"weekly",priority:i?0.8:1}))}
