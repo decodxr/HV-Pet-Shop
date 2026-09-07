@@ -1,0 +1,1 @@
+import {AdminResource} from "@/components/admin-resource";export default function Page(){return <AdminResource title="Produtos" description="Gerencie produtos, categorias, imagens, preços e disponibilidade."/>}
