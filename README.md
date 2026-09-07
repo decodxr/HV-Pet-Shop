@@ -35,3 +35,9 @@ Para trocar imagens provisórias, publique os arquivos no bucket apropriado e at
 ## Deploy na Vercel
 
 Importe o repositório, cadastre as quatro variáveis do `.env.example`, defina `NEXT_PUBLIC_SITE_URL` com o domínio final e faça o deploy. Rode `npm run build` antes de publicar.
+
+## SEO, Analytics e conteúdo comercial
+
+A aplicação gera metadata, Open Graph, Twitter Cards, sitemap, robots, dados estruturados de negócio local, breadcrumbs e FAQ. Configure `NEXT_PUBLIC_GA_ID` somente quando a HV optar pelo Google Analytics 4; sem a variável, nenhum script de analytics é carregado. Eventos de WhatsApp, rota, telefone, Instagram e consultas ficam preparados automaticamente.
+
+FAQ e Momentos HV possuem tabelas próprias na migration `002_marketing_content.sql`. Momentos permanecem ocultos até existirem registros reais ativos. A foto da responsável também fica oculta até o upload de uma imagem oficial no painel, em **Configurações**.

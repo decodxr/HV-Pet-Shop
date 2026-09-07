@@ -1,1 +1,3 @@
-import {redirect} from "next/navigation";import {createClient} from "@/lib/supabase/server";export default async function Layout({children}:{children:React.ReactNode}){if(!process.env.NEXT_PUBLIC_SUPABASE_URL)return children;const supabase=await createClient();const {data:{user}}=await supabase.auth.getUser();if(!user)redirect("/admin/login");const {data:profile}=await supabase.from("profiles").select("role").eq("id",user.id).single();if(profile?.role!=="admin")redirect("/");return children}
+export default function AdminLayout({children}:{children:React.ReactNode}) {
+  return children;
+}
